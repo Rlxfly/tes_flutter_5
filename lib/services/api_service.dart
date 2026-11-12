@@ -22,9 +22,9 @@ class ApiService {
   /// Melempar [Exception] dengan pesan yang ramah pengguna jika gagal.
   Future<List<User>> getUsers() async {
     try {
-      _logRequest('GET', '/users');
+      _logRequest('GET', '/mahasiswa.json');
       final response = await _client
-          .get(Uri.parse('$_baseUrl/users'), headers: _buildHeaders())
+          .get(Uri.parse('$_baseUrl/mahasiswa.json'), headers: _buildHeaders())
           .timeout(Duration(seconds: AppConfig.timeoutSeconds));
       _logResponse(response.statusCode);
       if (response.statusCode == 200) {
@@ -47,9 +47,9 @@ class ApiService {
   /// Mengambil pengguna berdasarkan [id].
   Future<User> getUserById(int id) async {
     try {
-      _logRequest('GET', '/users/$id');
+      _logRequest('GET', '/mahasiswa.json');
       final response = await _client
-          .get(Uri.parse('$_baseUrl/users/$id'), headers: _buildHeaders())
+          .get(Uri.parse('$_baseUrl/mahasiswa.json'), headers: _buildHeaders())
           .timeout(Duration(seconds: AppConfig.timeoutSeconds));
       _logResponse(response.statusCode);
       if (response.statusCode == 200) {

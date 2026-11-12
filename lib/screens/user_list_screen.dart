@@ -133,16 +133,13 @@ class _UserListScreenState extends State<UserListScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              user.name,
+              user.nama,
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
-            Text('Username: ${user.username}'),
-            Text('Email: ${user.email}'),
-            Text('Telepon: ${user.phone}'),
-            Text('Website: ${user.website}'),
-            Text('Perusahaan: ${user.companyName}'),
-
+            Text('User: ${user.nama}'),
+            Text('Nim: ${user.nim}'),
+            Text('Kls: ${user.kelas}'),
             const SizedBox(height: 16),
             SizedBox(
               width: double.infinity,

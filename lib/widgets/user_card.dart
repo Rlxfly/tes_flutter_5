@@ -21,13 +21,13 @@ class UserCard extends StatelessWidget {
           ),
         ),
         title: Text(
-          user.name,
+          user.nama,
           style: const TextStyle(fontWeight: FontWeight.bold),
         ),
         subtitle: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('@${user.username}'),
+            Text('@${user.kelas}'),
             Text(
               user.email,
               style: const TextStyle(fontSize: 12, color: Colors.grey),
